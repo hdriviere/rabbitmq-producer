@@ -1,13 +1,18 @@
 name := "rabbitmq-producer"
 
-version := "0.1"
+version := "1.0"
 
 scalaVersion := "2.13.1"
 
+lazy val akkaVersion = "2.6.1"
+
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-stream" % "2.6.1",
+  "com.typesafe.akka" %% "akka-actor-typed" % akkaVersion,
+  "com.typesafe.akka" %% "akka-stream" % akkaVersion,
   "com.lightbend.akka" %% "akka-stream-alpakka-amqp" % "1.1.2",
   "com.lightbend.akka" %% "akka-stream-alpakka-csv" % "1.1.2",
-  "org.scalatest" %% "scalatest" % "3.0.8" % "test",
-  "com.typesafe.akka" %% "akka-stream-testkit" % "2.6.1" % "test"
+  "ch.qos.logback" % "logback-classic" % "1.2.3",
+  "com.typesafe.akka" %% "akka-actor-testkit-typed" % akkaVersion % "test",
+  "com.typesafe.akka" %% "akka-stream-testkit" % akkaVersion % "test",
+  "org.scalatest" %% "scalatest" % "3.0.8" % "test"
 )

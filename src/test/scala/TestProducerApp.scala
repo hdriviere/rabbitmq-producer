@@ -1,5 +1,4 @@
 import ProducerApp._
-import akka.NotUsed
 import akka.stream.scaladsl.{Flow, Keep, Sink}
 import akka.util.ByteString
 import org.scalatest.FunSuite

@@ -1,0 +1,23 @@
+version: "3"
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - 15672:15672
+      - 5672:5672
+
+  producer:
+    image: rabbitmq-producer
+    container_name: producer
+    entrypoint: sbt run
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      FILE_TO_PROCESS: /tmp/title.basics.tsv
+    volumes:
+      - /tmp/title.basics.tsv:/tmp/title.basics.tsv
+
+  test-producer:
+    image: rabbitmq-producer
+    container_name: test-producer
+    entrypoint: sbt test

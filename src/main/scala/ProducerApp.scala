@@ -8,8 +8,6 @@ import akka.stream.alpakka.amqp.{AmqpLocalConnectionProvider, AmqpUriConnectionP
 import akka.stream.alpakka.csv.scaladsl.{CsvParsing, CsvToMap}
 import akka.stream.scaladsl._
 import akka.util.ByteString
-import scala.util.Properties
-
 
 import scala.concurrent.duration._
 import scala.concurrent.{Await, Future}

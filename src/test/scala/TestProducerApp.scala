@@ -16,5 +16,4 @@ class TestProducerApp extends FunSuite {
     val result = Await.result(future, 3 seconds)
     assert(result == " " + "Salome Mad" + " " + "Jarní sen starého mládence")
   }
-
 }

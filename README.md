@@ -22,7 +22,7 @@ The `setup.sh` script is going to:
 - `docker-compose up test-producer` in order to run the unit testing process
 
 # Comments
-If you don't want to use Docker to run the project, you don't have to. 
+If you don't want to use Docker to run the project, you don't have to.  
 You can add some environment variables and run the project with sbt. 
 
 
